@@ -9,9 +9,13 @@ using namespace std;
 template <typename T>//se define el template para el uso de la clase de tipo generica T. 
 ListaSimple<T>::ListaSimple(){//constructor sin parametros.
     head=tail=NULL;//se inicializan el head y tail como nulos.
+    num_nodos=0;
 }
-
-
+template<typename T>
+int ListaSimple<T>::getLargo(){//retorna el largo de la lista 
+  int num=num_nodos;
+  return num;
+}
 
 template<typename T>
 ListaSimple<T>::~ListaSimple() {//destructor de la clase.
@@ -29,7 +33,7 @@ void ListaSimple<T>::insertarInicio(T valor){//metodo insertar un elemento al in
         nodo_nuevo->setNext(head);
         head = nodo_nuevo;
     }
-    
+    num_nodos+=1;
 }
 
 template<typename T>
@@ -45,6 +49,7 @@ void ListaSimple<T>::insertarFinal(T valor){//inserta un elemento al final.
         }
         tmp->setNext(nodo_nuevo);      
     }
+    num_nodos+=1;;
 }
 template<typename T>
 void ListaSimple<T>::eliminarFinal(){//elimina el elemento final de la lista.
@@ -56,7 +61,8 @@ void ListaSimple<T>::eliminarFinal(){//elimina el elemento final de la lista.
             tmp = tmp->getNext();
             tail=tmp;
         }
-        tail->setNext(NULL);       
+        tail->setNext(NULL);  
+        num_nodos-=1;;
     }
 }
 template<typename T>
@@ -64,7 +70,35 @@ void ListaSimple<T>::eliminarInicio(){//eliminar dato inicio.
     if(head==NULL)//si el head es nulo.
         cout <<"Lista esta vacia"<<endl;
     else{       
-        head=head->getNext();       
+        head=head->getNext(); 
+        num_nodos-=1;;
+    }
+}
+
+// Eliminar por posición del nodo
+template<typename T>//NO SIRVE.
+void ListaSimple<T>::eliminarPorPos(int pos)
+{
+    Nodo<T> *tmp = head;
+    Nodo<T> *tmp1 = tmp->getNext();
+ 
+    if (pos < 1 || pos > num_nodos){//num_nodos) {
+        cout << "Fuera de rango " << endl;
+    } else if (pos == 1) {
+        head = tmp->getNext();
+    } else {
+        for (int i = 2; i <= pos; i++) {
+            if (i == pos) {
+                //Nodo<T> *auxiliar = tmp1;
+                head->setNext(head->getNext()->getNext());
+                
+                //tmp->setNext(tmp1->getNext());
+                //auxiliar->~Nodo();
+                num_nodos-=1;
+            }
+            tmp = tmp->getNext();
+            tmp1 = tmp1->getNext();
+        }
     }
 }
 
@@ -79,11 +113,8 @@ bool ListaSimple<T>::buscar(T valor){
             esta=true;
             break;
         }
-        tmp = tmp->getNext();
-        
+        tmp = tmp->getNext();       
     }
- 
-    cout << esta << endl;
     return esta;
 }
 
@@ -91,14 +122,14 @@ bool ListaSimple<T>::buscar(T valor){
 template<typename T>
 void ListaSimple<T>::print()//imprime los elementos de la lista.
 {
-    Nodo<T> *temp = head;//temporal para el head.
+    Nodo<T> *tmp = head;//temporal para el head.
     if (!head) {//si head en nulo.
         cout << "La Lista está vacía " << endl;
     } else {
-        while (temp) {//recorre la lista imprimiendo sus datos.
-            temp->print();
-            if (!temp->getNext()) cout << "NULL";
-                temp = temp->getNext();
+        while (tmp) {//recorre la lista imprimiendo sus datos.
+            tmp->print();
+            if (!tmp->getNext()) cout << "NULL";
+                tmp = tmp->getNext();
         }
   }
   cout << endl << endl;

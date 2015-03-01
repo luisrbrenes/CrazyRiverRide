@@ -68,7 +68,24 @@ void ListaSimple<T>::eliminarInicio(){//eliminar dato inicio.
     }
 }
 
-
+// Buscar el dato de un nodo
+template<typename T>
+bool ListaSimple<T>::buscar(T valor){
+    Nodo<T> *tmp = head;
+    
+    bool esta=false;
+    while (tmp) {
+        if (tmp->getValue() == valor) {
+            esta=true;
+            break;
+        }
+        tmp = tmp->getNext();
+        
+    }
+ 
+    cout << esta << endl;
+    return esta;
+}
 
 // Imprimir la Lista
 template<typename T>

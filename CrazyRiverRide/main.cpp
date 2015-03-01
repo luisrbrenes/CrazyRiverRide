@@ -19,7 +19,12 @@ int main() {
     lista1.insertarFinal(ele2);
     lista1.insertarInicio(ele3);
      //lista1.eliminarInicio();
+    //lista1.buscar(67) ;
+ 
+   
+    lista1.eliminarPorPos(3);
     
+    //lista1.largo();
     cout << "Lista al inicio " << endl;
     lista1.print();
     

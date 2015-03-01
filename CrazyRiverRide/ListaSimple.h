@@ -22,6 +22,7 @@ class ListaSimple {//clase lista
 private:
     Nodo<T> *head;//nodos head y tail como atributos privados.
     Nodo<T> *tail;
+    int num_nodos;//se inicializa el contador de nodos.
     
 public://se definen los metodos publicos
     ListaSimple();   //constructor
@@ -30,11 +31,11 @@ public://se definen los metodos publicos
     void eliminarInicio();//elimina elemento del inicio.
     void insertarFinal(T);//inserta elemento al final.
     void eliminarFinal();//elimina elemento del final
-    void buscar(T);//busca el elemento.
+    bool buscar(T);//busca el elemento,true  si esta, false si no esta.
     void print(); //imprime la lista.
-    
-
-
+    void eliminarPorPos(int);//elimina elemento por posicion.
+    int largo();
+    int getLargo();
 };
 
 #endif	/* LISTASIMPLE_H */

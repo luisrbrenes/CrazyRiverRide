@@ -6,7 +6,6 @@ using namespace std;
  
 // Constructor por defecto
 template<class T>
-
 Nodo<T>::Nodo(void){ //constructor vacio.
     dato=NULL;
     siguiente=NULL;
@@ -20,6 +19,10 @@ template<typename T>
 Nodo<T>::Nodo(T valor, Nodo *next){//constructor con valor y puntero siguiente.
     dato=valor;
     siguiente=next;
+}
+template<typename T>
+Nodo<T>::~Nodo(){
+    delete this;
 }
 template <typename T>
 T Nodo<T>::getValue(){//retorna dato.

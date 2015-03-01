@@ -7,7 +7,7 @@ using namespace std;
 // Constructor por defecto
 template<class T>
 
-Nodo<T>::Nodo(void){//constructor vacio.
+Nodo<T>::Nodo(void){ //constructor vacio.
     dato=NULL;
     siguiente=NULL;
 }

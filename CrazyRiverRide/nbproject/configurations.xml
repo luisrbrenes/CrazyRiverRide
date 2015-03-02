@@ -22,9 +22,16 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="f1" displayName="Logic" projectFiles="true">
+        <itemPath>Bullet.cpp</itemPath>
+        <itemPath>CampoDeJuego.cpp</itemPath>
+        <itemPath>Constantes.cpp</itemPath>
+        <itemPath>Controlador.cpp</itemPath>
+        <itemPath>Enemigo.cpp</itemPath>
+        <itemPath>ListaSimple.cpp</itemPath>
+        <itemPath>Nave.cpp</itemPath>
+        <itemPath>Nodo.cpp</itemPath>
+        <itemPath>ObjetoMovil.cpp</itemPath>
       </logicalFolder>
-      <itemPath>ListaSimple.cpp</itemPath>
-      <itemPath>Nodo.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -49,13 +56,23 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="Bullet.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Bullet.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CampoDeJuego.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CampoDeJuego.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Constantes.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Constantes.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Controlador.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Controlador.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Enemigo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Enemigo.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -63,11 +80,15 @@
       </item>
       <item path="ListaSimple.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Nave.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Nave.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Nodo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Nodo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ObjetoMovil.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ObjetoMovil.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -94,13 +115,23 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="Bullet.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Bullet.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CampoDeJuego.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CampoDeJuego.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Constantes.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Constantes.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Controlador.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Controlador.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Enemigo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Enemigo.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -108,11 +139,15 @@
       </item>
       <item path="ListaSimple.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Nave.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Nave.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Nodo.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Nodo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ObjetoMovil.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ObjetoMovil.h" ex="false" tool="3" flavor2="0">
       </item>

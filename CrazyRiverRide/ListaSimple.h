@@ -1,16 +1,8 @@
-/* 
- * File:   ListaSimple.h
- * Author: stiven
- *
- * Created on February 25, 2015, 2:06 PM
- */
+
 
 #ifndef LISTASIMPLE_H
 #define	LISTASIMPLE_H
-#include <fstream>
 #include <iostream>
-#include <string>
-#include <stdlib.h>
 #include "Nodo.cpp"
 #include "Nodo.h"
  
@@ -32,9 +24,7 @@ public://se definen los metodos publicos
     void insertarFinal(T);//inserta elemento al final.
     void eliminarFinal();//elimina elemento del final
     bool buscar(T);//busca el elemento,true  si esta, false si no esta.
-    void print(); //imprime la lista.
-    void eliminarPorPos(int);//elimina elemento por posicion.
-    int largo();
+    void print(); //imprime la lista .
     int getLargo();
 };
 

@@ -1,7 +1,6 @@
 
 
 #include <iostream>
-#include <string>
 #include "ListaSimple.h"
 using namespace std;
  
@@ -75,34 +74,9 @@ void ListaSimple<T>::eliminarInicio(){//eliminar dato inicio.
     }
 }
 
-// Eliminar por posición del nodo
-template<typename T>//NO SIRVE.
-void ListaSimple<T>::eliminarPorPos(int pos)
-{
-    Nodo<T> *tmp = head;
-    Nodo<T> *tmp1 = tmp->getNext();
- 
-    if (pos < 1 || pos > num_nodos){//num_nodos) {
-        cout << "Fuera de rango " << endl;
-    } else if (pos == 1) {
-        head = tmp->getNext();
-    } else {
-        for (int i = 2; i <= pos; i++) {
-            if (i == pos) {
-                //Nodo<T> *auxiliar = tmp1;
-                head->setNext(head->getNext()->getNext());
-                
-                //tmp->setNext(tmp1->getNext());
-                //auxiliar->~Nodo();
-                num_nodos-=1;
-            }
-            tmp = tmp->getNext();
-            tmp1 = tmp1->getNext();
-        }
-    }
-}
 
-// Buscar el dato de un nodo
+
+// Buscar el dato de un  nodo
 template<typename T>
 bool ListaSimple<T>::buscar(T valor){
     Nodo<T> *tmp = head;

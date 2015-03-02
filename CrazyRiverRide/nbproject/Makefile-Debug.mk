@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/ListaSimple.o \
 	${OBJECTDIR}/Nodo.o \
+	${OBJECTDIR}/briam.o \
 	${OBJECTDIR}/main.o
 
 
@@ -73,6 +74,11 @@ ${OBJECTDIR}/Nodo.o: Nodo.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Nodo.o Nodo.cpp
+
+${OBJECTDIR}/briam.o: briam.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/briam.o briam.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

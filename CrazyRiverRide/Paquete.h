@@ -16,7 +16,7 @@ class Paquete: public ObjetoMovil{
     int tamano;
     
     public:
-        Paquete(int,int);
+        Paquete(int,int,int,int);
         /*0=balas basicas
           1=balas pro
           2=balas difucion

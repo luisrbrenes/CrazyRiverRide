@@ -35,9 +35,14 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/Bullet.o \
+	${OBJECTDIR}/CampoDeJuego.o \
+	${OBJECTDIR}/Constantes.o \
 	${OBJECTDIR}/ListaSimple.o \
+	${OBJECTDIR}/Nave.o \
 	${OBJECTDIR}/Nodo.o \
-	${OBJECTDIR}/briam.o \
+	${OBJECTDIR}/ObjetoMovil.o \
+	${OBJECTDIR}/Paquete.o \
 	${OBJECTDIR}/main.o
 
 
@@ -65,20 +70,45 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/crazyriverride: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/crazyriverride ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/Bullet.o: Bullet.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Bullet.o Bullet.cpp
+
+${OBJECTDIR}/CampoDeJuego.o: CampoDeJuego.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CampoDeJuego.o CampoDeJuego.cpp
+
+${OBJECTDIR}/Constantes.o: Constantes.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Constantes.o Constantes.cpp
+
 ${OBJECTDIR}/ListaSimple.o: ListaSimple.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListaSimple.o ListaSimple.cpp
+
+${OBJECTDIR}/Nave.o: Nave.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Nave.o Nave.cpp
 
 ${OBJECTDIR}/Nodo.o: Nodo.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Nodo.o Nodo.cpp
 
-${OBJECTDIR}/briam.o: briam.cpp 
+${OBJECTDIR}/ObjetoMovil.o: ObjetoMovil.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/briam.o briam.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ObjetoMovil.o ObjetoMovil.cpp
+
+${OBJECTDIR}/Paquete.o: Paquete.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Paquete.o Paquete.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

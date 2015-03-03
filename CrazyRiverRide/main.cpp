@@ -22,7 +22,6 @@ int main() {
     //lista1.buscar(67) ;
  
    
-    lista1.eliminarPorPos(3);
     
     //lista1.largo();
     cout << "Lista al inicio " << endl;
